@@ -9,6 +9,7 @@ dotenv.config({});
 import { createExpressServer } from 'routing-controllers';
 import { EventController } from '../src/controllers/EventController';
 import { initTypeOrm } from './bootstrap/initTypeOrm';
+import { RecurringEventController } from './controllers/RecurringEventController';
 
 async function init() {
 
@@ -16,7 +17,7 @@ async function init() {
     useContainer(Container);
     // creates express app, registers all controller routes and returns you express app instance
     const app = createExpressServer({
-        controllers: [EventController], // we specify controllers we want to use
+        controllers: [EventController, RecurringEventController], // we specify controllers we want to use
         validation: true
     });
 

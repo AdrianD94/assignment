@@ -1,9 +1,7 @@
 import { Type } from "class-transformer";
 import { IsBoolean, IsDateString, IsEnum, IsInstance, IsInt, IsNotEmpty, IsNumber, IsOptional, IsString, MaxLength, MinLength, ValidateNested } from "class-validator";
 
-enum UnitOfTime {
-    minutes = 'minutes',
-    hours = 'hours',
+export enum UnitOfTime {
     days = 'days',
     weeks = 'weeks',
     months = 'months'
